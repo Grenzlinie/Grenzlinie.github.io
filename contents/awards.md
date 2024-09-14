@@ -1,9 +1,8 @@
-- First-prize Academic Scholarship, 2023.
-
-- Freshman Academic Scholarship, 2022.
-
-- Excellent Graduation Project of Jiangsu Province, 2022.
-
-- First-prize Enterprise Scholarship, 2021.
-
-- First-prize Academic Scholarship, 2019.
+- National Scholarship, China, 2023.
+- National Scholarship for Encouragement, China, 2017/2018/2019.
+- Outstanding Graduate of Fudan University.
+- Fudan University Outstanding Student.
+- Fudan University Outstanding Academic Scholarship.
+- Outstanding Graduate of Central South University.
+- Central South University Outstanding Student.
+- Central South University Outstanding Academic Scholarship.
