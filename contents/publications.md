@@ -1,3 +1,5 @@
+- B. Hu, <strong>S. Liu</strong>, B. Ye, Y. Hao, T. Wen* (2024). A Multi-agent Framework for Materials Laws Discovery. <strong>arXiv</strong> [[Paper]](https://arxiv.org/abs/2411.16416)
+
 - <strong>S. Liu</strong>, T. Wen*, B. Ye, Z. Li and DJ. Srolovitz (2024). Large Language Models for Material Property Predictions: elastic constant tensor prediction and materials design. <strong>arXiv</strong> [[Paper]](https://arxiv.org/abs/2411.12280)
 
 - <strong>S. Liu</strong>, T. Wen*, A.S.L. Pattamatta and DJ. Srolovitz (2024). A Prompt-Engineered Large Language Model, Deep Learning Workflow for Materials Classification. <strong>Materials Today</strong> [[Paper]](https://www.sciencedirect.com/science/article/abs/pii/S1369702124002001) [[Code]](https://github.com/Grenzlinie/MgBERT_LLM_Classification_for_Materials_Science)
