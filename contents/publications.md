@@ -1,3 +1,5 @@
+- Zhuoyuan Li, <strong>Siyu Liu</strong>, Beilin Ye, David J. Srolovitz, T. Wen* (2025). Active Learning for Conditional Inverse Design with Crystal Generation and Foundation Atomic Models. <strong>arXiv</strong> [[Paper]](https://arxiv.org/abs/2502.16984)
+
 - B. Hu, <strong>S. Liu</strong>, B. Ye, Y. Hao, T. Wen* (2024). A Multi-agent Framework for Materials Laws Discovery. <strong>arXiv</strong> [[Paper]](https://arxiv.org/abs/2411.16416)
 
 - <strong>S. Liu</strong>, T. Wen*, B. Ye, Z. Li and DJ. Srolovitz (2024). Large Language Models for Material Property Predictions: elastic constant tensor prediction and materials design. <strong>arXiv</strong> [[Paper]](https://arxiv.org/abs/2411.12280)
