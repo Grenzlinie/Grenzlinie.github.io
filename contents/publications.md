@@ -1,3 +1,5 @@
+- <strong>S. Liu</strong>, J. Xu, B. Ye, B. Hu, DJ. Srolovitz*, T. Wen* (2025). MatTools: Benchmarking Large Language Models for Materials Science Tools. <strong>arXiv</strong> [[Paper]](https://arxiv.org/abs/2505.10852v1)
+
 - Zhuoyuan Li, <strong>Siyu Liu</strong>, Beilin Ye, David J. Srolovitz, T. Wen* (2025). Active Learning for Conditional Inverse Design with Crystal Generation and Foundation Atomic Models. <strong>arXiv</strong> [[Paper]](https://arxiv.org/abs/2502.16984)
 
 - B. Hu, <strong>S. Liu</strong>, B. Ye, Y. Hao, T. Wen* (2024). A Multi-agent Framework for Materials Laws Discovery. <strong>arXiv</strong> [[Paper]](https://arxiv.org/abs/2411.16416)
