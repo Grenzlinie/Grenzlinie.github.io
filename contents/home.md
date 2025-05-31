@@ -1,6 +1,6 @@
 
 
-[![siyu](https://img.shields.io/badge/Genzlinie-github-blue?logo=github)](https://github.com/Grenzlinie?tab=repositories)
+[![siyu](https://img.shields.io/badge/Genzlinie-github-blue?logo=github)](https://github.com/Grenzlinie)
 
 He is currently pursuing a Doctor's Degree in Materials Science, at Department of Mechanical Engineering, University of Hong Kong, HKSAR, China.
 
