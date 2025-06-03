@@ -1,6 +1,6 @@
 - <strong>S. Liu</strong>, J. Xu, B. Ye, B. Hu, DJ. Srolovitz*, T. Wen* (2025). MatTools: Benchmarking Large Language Models for Materials Science Tools. <strong>arXiv</strong> [[Paper]](https://arxiv.org/abs/2505.10852v1)
 
-- <strong>S. Liu</strong>, T. Wen*, B. Ye, Z. Li and DJ. Srolovitz (2025). Large Language Models for Material Property Predictions: elastic constant tensor prediction and materials design. <strong>Digital Discovery</strong> [[Paper]](https://pubs.rsc.org/en/content/articlelanding/2025/dd/d5dd00061k) [[Code]](https://github.com/Grenzlinie/ElaTBot)
+- <strong>S. Liu</strong>, T. Wen*, B. Ye, Z. Li and DJ. Srolovitz* (2025). Large Language Models for Material Property Predictions: elastic constant tensor prediction and materials design. <strong>Digital Discovery</strong> [[Paper]](https://pubs.rsc.org/en/content/articlelanding/2025/dd/d5dd00061k) [[Code]](https://github.com/Grenzlinie/ElaTBot)
 
 - Zhuoyuan Li, <strong>Siyu Liu</strong>, Beilin Ye, David J. Srolovitz, T. Wen* (2025). Active Learning for Conditional Inverse Design with Crystal Generation and Foundation Atomic Models. <strong>arXiv</strong> [[Paper]](https://arxiv.org/abs/2502.16984)
 
