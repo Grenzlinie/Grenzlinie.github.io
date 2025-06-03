@@ -1,10 +1,10 @@
 - <strong>S. Liu</strong>, J. Xu, B. Ye, B. Hu, DJ. Srolovitz*, T. Wen* (2025). MatTools: Benchmarking Large Language Models for Materials Science Tools. <strong>arXiv</strong> [[Paper]](https://arxiv.org/abs/2505.10852v1)
 
+- <strong>S. Liu</strong>, T. Wen*, B. Ye, Z. Li and DJ. Srolovitz (2025). Large Language Models for Material Property Predictions: elastic constant tensor prediction and materials design. <strong>Digital Discovery</strong> [[Paper]](https://pubs.rsc.org/en/content/articlelanding/2025/dd/d5dd00061k) [[Code]](https://github.com/Grenzlinie/ElaTBot)
+
 - Zhuoyuan Li, <strong>Siyu Liu</strong>, Beilin Ye, David J. Srolovitz, T. Wen* (2025). Active Learning for Conditional Inverse Design with Crystal Generation and Foundation Atomic Models. <strong>arXiv</strong> [[Paper]](https://arxiv.org/abs/2502.16984)
 
 - B. Hu, <strong>S. Liu</strong>, B. Ye, Y. Hao, T. Wen* (2024). A Multi-agent Framework for Materials Laws Discovery. <strong>arXiv</strong> [[Paper]](https://arxiv.org/abs/2411.16416)
-
-- <strong>S. Liu</strong>, T. Wen*, B. Ye, Z. Li and DJ. Srolovitz (2024). Large Language Models for Material Property Predictions: elastic constant tensor prediction and materials design. <strong>Digital Discovery</strong> [[Paper]](https://pubs.rsc.org/en/content/articlelanding/2025/dd/d5dd00061k)
 
 - <strong>S. Liu</strong>, T. Wen*, A.S.L. Pattamatta and DJ. Srolovitz (2024). A Prompt-Engineered Large Language Model, Deep Learning Workflow for Materials Classification. <strong>Materials Today</strong> [[Paper]](https://www.sciencedirect.com/science/article/abs/pii/S1369702124002001) [[Code]](https://github.com/Grenzlinie/MgBERT_LLM_Classification_for_Materials_Science)
 
