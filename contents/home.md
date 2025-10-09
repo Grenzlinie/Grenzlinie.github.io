@@ -2,7 +2,7 @@
 
 [![siyu](https://img.shields.io/badge/Genzlinie-github-blue?logo=github)](https://github.com/Grenzlinie)
 
-He is currently pursuing a Doctor's Degree in Materials Science, at Department of Mechanical Engineering, University of Hong Kong, HKSAR, China.
+He is currently pursuing a Doctor's Degree in Materials Science, at Department of Mechanical Engineering, University of Hong Kong, HKSAR, China. He has served as a reviewer for Computational Materials Today, Computational Materials Science, and Scientific Reports.
 
 #### Email
 siyuliu[at]connect.hku.hk
