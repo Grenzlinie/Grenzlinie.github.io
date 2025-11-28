@@ -1,5 +1,24 @@
-title: Siyu Liu's Homepage
+title: Siyu Liu · Computational Materials Science
 page-top-title: Siyu Liu
-top-section-bg-text: Computational Materials Science
-home-subtitle: Siyu Liu&ensp;|&ensp;刘思宇
-copyright-text: '&copy; Siyu Liu 2024-2025. All Rights Reserved.'
+hero-eyebrow: Computational Materials Researcher
+hero-heading: Accelerating materials discovery with data-centric AI
+hero-subheading: I build physics-guided, data-centric workflows that connect large language models with atomistic simulations for faster materials discovery.
+hero-highlight: HKU Mechanical Engineering · Ph.D. Candidate
+hero-secondary: Materials informatics · Generative design · Scientific foundation models
+hero-cta-text: Let's collaborate
+hero-profile-note: 👀 I’m interested in Computer Science, Materials Science, Physics and so on...
+hero-profile-extra: 🌱 I’m currently learning How to Take a Break ^ ^
+home-subtitle: Research Snapshot
+home-lede: Researching autonomous, trustworthy AI tools that translate crystal structures and physics priors into actionable design insights.
+email-user: siyuliu
+email-domain: connect.hku.hk
+contact-location: Hong Kong SAR · China
+contact-cv: GitHub
+contact-cv-link: https://github.com/Grenzlinie
+research-focus:
+  - Generative models for crystal and materials design
+  - Scientific foundation models & multi-agent workflows
+  - Physics-grounded learning pipelines for autonomous labs
+publications-cta: View on Google Scholar
+publications-cta-link: https://scholar.google.com/citations?hl=zh-CN&user=cCE-lrEAAAAJ&view_op=list_works&sortby=pubdate
+copyright-text: '&copy; Siyu Liu 2024-2026. All Rights Reserved.'

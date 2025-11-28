@@ -113,70 +113,125 @@
         </div>
     </nav>
 
-    <!-- Top Section -->
-    <section class="top-section" style="background-image: url('static/assets/img/background.jpeg');">
-        <div class="top-section-content">
-            <div class="container px-5">
-                <h2 id="top-section-bg-text" class="text-white display-3 lh-1 font-alt"></h2>
+    <!-- Hero -->
+    <section class="hero" style="background-image: url('static/assets/img/background.jpeg');" id="intro">
+        <div class="container px-5">
+            <div class="row align-items-center g-5">
+                <div class="col-lg-7">
+                    <p class="hero-eyebrow text-uppercase" id="hero-eyebrow"></p>
+                    <h1 class="text-white display-4 fw-bold" id="hero-heading"></h1>
+                    <p class="hero-subheading text-white-50 lead" id="hero-subheading"></p>
+                    <div class="hero-meta">
+                        <span class="tag" id="hero-highlight"></span>
+                        <span class="tag tag-muted" id="hero-secondary"></span>
+                    </div>
+                    <div class="hero-actions">
+                        <a class="btn btn-light btn-lg" href="#publications">Explore Work</a>
+                        <a class="btn btn-outline-light btn-lg" id="hero-cta" href="#">
+                            <span id="hero-cta-text"></span>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-5">
+                    <div class="profile-card shadow-lg">
+                        <div class="profile-photo-wrapper">
+                            <img class="profile-photo" src="static/assets/img/photo.jpeg" alt="Portrait of Siyu Liu" onerror="this.style.display='none';">
+                        </div>
+                        <div class="profile-card-body">
+                            <p class="profile-note" id="hero-profile-note"></p>
+                            <p class="profile-extra text-muted" id="hero-profile-extra"></p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
-    <!-- Top Section -->
-
-    <!-- Photo -->
-    <div class="container px-5">
-        <div id="avatar">
-            <img class="shadow" src="static/assets/img/photo.jpeg" alt="Photo" onerror="this.style.display='none';">
-        </div>
-    </div>
-    <!-- Photo -->
+    <!-- Hero -->
     
     <!-- Home -->
-    <section class="bg-gradient-primary-to-secondary-light mt5 md5" id="home">
+    <section class="section bg-surface" id="home">
         <div class="container px-5">
-            <header>
-                <h2 id="home-subtitle"> </h2>
-                <!-- <span class="bi bi-list"></span> -->
-            </header>
-            <div class="main-body" id="home-md"></div>
+            <div class="section-heading">
+                <p class="eyebrow">About</p>
+                <h2 id="home-subtitle"></h2>
+                <p class="section-blurb" id="home-lede"></p>
+            </div>
+            <div class="row g-5 align-items-start">
+                <div class="col-lg-7">
+                    <div class="content-panel" id="home-md"></div>
+                </div>
+                <div class="col-lg-5">
+                    <div class="info-panel">
+                        <h3><i class="bi bi-envelope-paper"></i> Contact</h3>
+                        <ul class="contact-list">
+                            <li>
+                                <span>Email</span>
+                                <a id="contact-email" href="#" target="_blank" rel="noopener"></a>
+                            </li>
+                            <li>
+                                <span>Location</span>
+                                <p class="mb-0" id="contact-location"></p>
+                            </li>
+                            <li>
+                                <span>GitHub</span>
+                                <a id="contact-cv" href="#" target="_blank" rel="noopener"></a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="info-panel">
+                        <h3><i class="bi bi-stars"></i> Research Focus</h3>
+                        <div class="badge-cluster" id="research-focus"></div>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
     <!-- Home -->
 
     <!-- Publications -->
-    <section class="bg-gradient-primary-to-secondary-gray mt5 md5" id="publications">
+    <section class="section section-alt" id="publications">
         <div class="container px-5">
-            <header>
-                <h2 id="publications-subtitle"><i class="bi bi-file-text-fill"></i>&nbsp;PUBLICATIONS</h2>
-            </header>
-            <div class="main-body" id="publications-md"></div>
-
+            <div class="section-heading heading-row">
+                <div>
+                    <p class="eyebrow">Selected Work</p>
+                    <h2 id="publications-subtitle"><i class="bi bi-file-text-fill"></i>&nbsp;Publications</h2>
+                </div>
+                <a class="btn btn-outline-primary" id="publications-cta" href="#" target="_blank" rel="noopener"></a>
+            </div>
+            <div class="main-body publication-feed" id="publications-md"></div>
         </div>
     </section>
     <!-- Publications  -->
 
     <!-- Awards -->
-    <section class="bg-gradient-primary-to-secondary-light mt5 md5" id="awards">
+    <section class="section bg-surface" id="awards">
         <div class="container px-5">
-            <header>
-                <h2 id="awards-subtitle"><i class="bi bi-award-fill"></i>AWARDS </h2>
-            </header>
+            <div class="section-heading">
+                <p class="eyebrow">Recognition</p>
+                <h2 id="awards-subtitle"><i class="bi bi-award-fill"></i> Awards & Honors</h2>
+            </div>
             <div class="main-body" id="awards-md"></div>
-
         </div>
     </section>
     <!-- Awards -->
 
 
     <!-- Footer-->
-    <footer class="bg-bottom text-center py-5">
+    <footer class="site-footer text-center py-5">
         <div class="container px-5">
-            <div class="text-white-50 small">
-                <div id="copyright-text" class="mb-2"></div>
-                <a id="github-link" href="https://github.com/Grenzlinie">Github</a>
-                <span class="mx-1">&middot;</span>
-                <a id="license-link" href="https://github.com/Grenzlinie/Grenzlinie.github.io/blob/main/LICENSE">License</a>
+            <div class="footer-brand">Siyu Liu</div>
+            <div class="social-links">
+                <a href="https://github.com/Grenzlinie" target="_blank" rel="noopener" aria-label="GitHub">
+                    <i class="bi bi-github"></i>
+                </a>
+                <a href="https://scholar.google.com/citations?hl=zh-CN&user=cCE-lrEAAAAJ&view_op=list_works&sortby=pubdate" target="_blank" rel="noopener" aria-label="Google Scholar">
+                    <i class="bi bi-google"></i>
+                </a>
+                <a href="mailto:siyuliu@connect.hku.hk" aria-label="Email">
+                    <i class="bi bi-envelope"></i>
+                </a>
             </div>
+            <div class="small text-white-50" id="copyright-text"></div>
         </div>
     </footer>
 
