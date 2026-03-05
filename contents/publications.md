@@ -1,4 +1,8 @@
+- H. Cao, <strong>S. Liu</strong>, F. Zhang, ZJ. Liu, H. Li, B. Feng, S. Bai, L. Chen, K. Xie, Y. Li (2026). Mozi: Governed Autonomy for Drug Discovery LLM Agents. <strong>arXiv</strong> [[Paper]](https://arxiv.org/abs/2603.03655) [[DOI]](https://doi.org/10.48550/arXiv.2603.03655)
+
 - <strong>S. Liu</strong>, J. Xu, B. Ye, B. Hu, DJ. Srolovitz*, T. Wen* (2025). MatTools: Benchmarking Large Language Models for Materials Science Tools. <strong>arXiv</strong> [[Paper]](https://arxiv.org/abs/2505.10852v1)
+
+- H. Cao, <strong>S. Liu</strong>, F. Zhang, H. Li, ZJ. Liu, B. Feng, Y. Li (2025). DrugNav: A Benchmark Dataset of Expert Trajectories for Developing and Evaluating LLM Agents in Multi-Step Drug Discovery. <strong>NeurIPS 2025 AI for Science Workshop</strong>
 
 - <strong>S. Liu</strong>, T. Wen*, B. Ye, Z. Li and DJ. Srolovitz* (2025). Large Language Models for Material Property Predictions: elastic constant tensor prediction and materials design. <strong>Digital Discovery</strong> [[Paper]](https://pubs.rsc.org/en/content/articlelanding/2025/dd/d5dd00061k) [[Code]](https://github.com/Grenzlinie/ElaTBot)
 
@@ -25,4 +29,3 @@
 - H. He, S. Mei, Z. Chen, <strong>S. Liu</strong>, Z. Wen, Z. Cui, D. Yang, W. Zhang, F. Xie, B. Yang, R. Guo and G. Xing (2021). Thioacetamide-ligand-mediated synthesis of CsPbBr3–CsPbBr3 homostructured nanocrystals with enhanced stability. <strong>Journal of Materials Chemistry C</strong>. [[Paper]](https://pubs.rsc.org/en/content/articlehtml/2021/tc/d1tc02118d)
 
 - Latest publication list can be found in [My Google Scolar](https://scholar.google.com/citations?hl=zh-CN&user=cCE-lrEAAAAJ&view_op=list_works&sortby=pubdate).
-
