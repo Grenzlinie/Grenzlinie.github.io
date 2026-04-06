@@ -1,4 +1,6 @@
-- H. Cao, <strong>S. Liu</strong>, F. Zhang, ZJ. Liu, H. Li, B. Feng, S. Bai, L. Chen, K. Xie, Y. Li (2026). Mozi: Governed Autonomy for Drug Discovery LLM Agents. <strong>arXiv</strong> [[Paper]](https://arxiv.org/abs/2603.03655) [[DOI]](https://doi.org/10.48550/arXiv.2603.03655)
+- <strong>S. Liu</strong>, B. Hu, B. Ye, H. Cao, DJ. Srolovitz*, T. Wen* (2026). Test-Time Self-Evolution in Multi-Agent Systems for Materials Discovery. <strong>AI4X-AC 2026 (Oral)</strong> [[Paper]](https://openreview.net/forum?id=qqT5zb5dnq)
+
+- H. Cao, <strong>S. Liu</strong>, F. Zhang, ZJ. Liu, H. Li, B. Feng, S. Bai, L. Chen, K. Xie, Y. Li (2026). Mozi: Governed Autonomy for Drug Discovery LLM Agents. <strong>arXiv</strong> [[Paper]](https://arxiv.org/abs/2603.03655)
 
 - <strong>S. Liu</strong>, J. Xu, B. Ye, B. Hu, DJ. Srolovitz*, T. Wen* (2025). MatTools: Benchmarking Large Language Models for Materials Science Tools. <strong>arXiv</strong> [[Paper]](https://arxiv.org/abs/2505.10852v1)
 
