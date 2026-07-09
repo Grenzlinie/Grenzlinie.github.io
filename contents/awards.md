@@ -1,8 +1,0 @@
-- National Scholarship, China.
-- National Encouragement Scholarship, China.
-- Excellent Graduate of Shanghai, China.
-- Fudan University Outstanding Student, China.
-- Fudan University Outstanding Academic Scholarship, China.
-- Outstanding Graduate of Central South University, China.
-- Central South University Outstanding Student, China.
-- Central South University Outstanding Academic Scholarship, China.

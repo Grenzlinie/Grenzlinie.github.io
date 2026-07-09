@@ -1,240 +1,545 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-BFNYMDTXCN"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Siyu Liu · Computational Materials Science</title>
+  <meta name="description" content="Siyu Liu — Ph.D. candidate in the Materials Theory Group at HKU, building autonomous workflows that connect atomistic simulations, scientific foundation models, and large language models for accelerated materials discovery." />
+  <link rel="icon" href="static/assets/favicon.ico" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg: #faf9f5;
+      --surface: #f4f2ea;
+      --border: #e6e2d6;
+      --ink: #1a1915;
+      --ink-soft: #46443d;
+      --muted: #86837a;
+      --accent: #c15f3c;
+      --accent-soft: #cc785c;
+      --serif: "Newsreader", Georgia, "Times New Roman", serif;
+      --sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    }
 
-  gtag('config', 'G-BFNYMDTXCN');
-</script>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-    <meta name="description" content="Academic Webpage" />
-    <meta name="author" content="Grenzlinie" />
-    <title id="title"></title>
+    * { box-sizing: border-box; }
 
-    <!-- Icon -->
-    <link rel="icon" type="image/x-icon" href="static/assets/favicon.ico" />
+    html { scroll-behavior: smooth; }
 
-    <!-- Bootstrap icons-->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--ink);
+      font-family: var(--sans);
+      font-size: 16px;
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+    }
 
-    <!-- Google fonts-->
-    <link rel="preconnect" href="https://fonts.gstatic.com" />
-    <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,600;1,600&amp;display=swap"
-        rel="stylesheet" />
-    <link
-        href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,300;0,500;0,600;0,700;1,300;1,500;1,600;1,700&amp;display=swap"
-        rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,400;1,400&amp;display=swap"
-        rel="stylesheet" />
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { color: var(--accent-soft); }
 
-    <!-- Core theme CSS (includes Bootstrap)-->
-    <link type="text/css" href="static/css/styles.css" rel="stylesheet" />
-    <link type="text/css" href="static/css/main.css" rel="stylesheet" />
+    .wrap { max-width: 760px; margin: 0 auto; padding: 0 28px; }
 
-    <!-- Bootstrap core JS-->
-    <script type="text/javascript" src="static/js/bootstrap.bundle.min.js"></script>
+    /* ---------- Nav ---------- */
+    header.nav {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      background: rgba(250, 249, 245, 0.82);
+      backdrop-filter: saturate(180%) blur(12px);
+      border-bottom: 1px solid var(--border);
+    }
+    .nav-inner {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 15px 28px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .brand {
+      font-family: var(--serif);
+      font-size: 1.15rem;
+      font-weight: 600;
+      letter-spacing: -0.01em;
+      color: var(--ink);
+    }
+    .nav-links { display: flex; gap: 26px; }
+    .nav-links a {
+      color: var(--ink-soft);
+      font-size: 0.9rem;
+      font-weight: 500;
+      transition: color 0.15s ease;
+    }
+    .nav-links a:hover { color: var(--accent); }
 
-    <!-- For Compatability -->
-    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-    
-    <!-- Markdown -->
-    <script type="text/javascript" src="static/js/marked.min.js"></script>
+    /* ---------- Hero ---------- */
+    .hero { padding: 84px 0 56px; }
+    .hero-top {
+      display: flex;
+      align-items: center;
+      gap: 30px;
+      margin-bottom: 34px;
+    }
+    .avatar {
+      width: 104px;
+      height: 104px;
+      border-radius: 50%;
+      object-fit: cover;
+      flex-shrink: 0;
+      border: 1px solid var(--border);
+      box-shadow: 0 4px 18px rgba(26, 25, 21, 0.06);
+    }
+    .eyebrow {
+      color: var(--accent);
+      font-size: 0.82rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin: 0 0 8px;
+    }
+    .hero h1 {
+      font-family: var(--serif);
+      font-weight: 600;
+      font-size: 2.7rem;
+      line-height: 1.08;
+      letter-spacing: -0.02em;
+      margin: 0;
+      color: var(--ink);
+    }
+    .lede {
+      font-family: var(--serif);
+      font-size: 1.28rem;
+      line-height: 1.55;
+      color: var(--ink-soft);
+      margin: 0 0 30px;
+    }
+    .lede em { color: var(--accent); font-style: italic; }
 
-    <!-- Mathematics -->
-    <script>
-        // See https://docs.mathjax.org/en/latest/index.html for more details.
-        MathJax = {
-            tex: {
-                packages: {},              // extensions to use
-                inlineMath: [              // start/end delimiter pairs for in-line math
-                    ['$', '$'],
-                    ['\\(', '\\)']
-                ],
-                displayMath: [             // start/end delimiter pairs for display math
-                    ['$$', '$$'],
-                    ['\\[', '\\]']
-                ],
-                processEscapes: false,      // use \$ to produce a literal dollar sign
-                processEnvironments: true, // process \begin{xxx}...\end{xxx} outside math mode
-                processRefs: true,         // process \ref{...} outside of math mode
-                digits: /^(?:[0-9]+(?:\{,\}[0-9]{3})*(?:\.[0-9]*)?|\.[0-9]+)/,    // pattern for recognizing numbers
-                tags: 'all',              // or 'ams' or 'all'
-                tagSide: 'right',          // side for \tag macros
-                tagIndent: '0.8em',        // amount to indent tags
-                useLabelIds: true,         // use label name rather than tag for ids
-                maxMacros: 10000,          // maximum number of macro substitutions per expression
-                maxBuffer: 5 * 1024,       // maximum size for the internal TeX string (5K)
-                // baseURL:                   // URL for use with links to tags (when there is a <base> tag in effect)
-                // (document.getElementsByTagName('base').length === 0) ? '' : String(document.location).replace(/#.*$/, ''),
-                formatError:               // function called when TeX syntax errors occur
-                    (jax, err) => jax.formatError(err)
-            }
-        };
-    </script>
-    <script type="text/javascript" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
-    <script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    
-    <!-- Core JS-->
-    <script type="text/javascript" src="static/js/scripts.js"></script>
-    <script type="text/javascript" src="static/js/js-yaml.min.js"></script>
+    .links { display: flex; flex-wrap: wrap; gap: 12px; }
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 9px 16px;
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      background: var(--bg);
+      color: var(--ink-soft);
+      font-size: 0.88rem;
+      font-weight: 500;
+      transition: all 0.15s ease;
+    }
+    .pill:hover {
+      border-color: var(--accent-soft);
+      color: var(--accent);
+      background: var(--surface);
+    }
+    .pill svg { width: 16px; height: 16px; }
 
+    /* ---------- Sections ---------- */
+    section { padding: 40px 0; border-top: 1px solid var(--border); }
+    .section-title {
+      font-family: var(--serif);
+      font-size: 1.5rem;
+      font-weight: 600;
+      letter-spacing: -0.01em;
+      margin: 0 0 24px;
+      color: var(--ink);
+    }
+
+    /* Education */
+    .edu-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 18px;
+      padding: 12px 0;
+    }
+    .edu-item + .edu-item { border-top: 1px dashed var(--border); }
+    .edu-degree { font-weight: 600; color: var(--ink); }
+    .edu-detail { color: var(--muted); font-size: 0.95rem; }
+    .edu-year {
+      color: var(--muted);
+      font-size: 0.85rem;
+      font-variant-numeric: tabular-nums;
+      white-space: nowrap;
+    }
+
+    /* Research list */
+    .research-list { list-style: none; margin: 0; padding: 0; }
+    .research-list li {
+      position: relative;
+      padding: 8px 0 8px 24px;
+      color: var(--ink-soft);
+    }
+    .research-list li::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 17px;
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: var(--accent-soft);
+    }
+
+    /* Publications */
+    .pub { padding: 18px 0; }
+    .pub + .pub { border-top: 1px solid var(--border); }
+    .pub-title {
+      font-family: var(--serif);
+      font-size: 1.08rem;
+      font-weight: 600;
+      line-height: 1.4;
+      color: var(--ink);
+      margin: 0 0 5px;
+    }
+    .pub-authors { font-size: 0.92rem; color: var(--ink-soft); margin: 0 0 8px; }
+    .pub-authors .me { color: var(--ink); font-weight: 600; }
+    .pub-meta { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; }
+    .venue {
+      display: inline-block;
+      padding: 3px 10px;
+      border-radius: 6px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      font-size: 0.78rem;
+      font-weight: 600;
+      color: var(--ink-soft);
+    }
+    .venue.oral { color: var(--accent); border-color: var(--accent-soft); }
+    .pub-year { color: var(--muted); font-size: 0.82rem; font-variant-numeric: tabular-nums; }
+    .pub-links { display: inline-flex; gap: 12px; }
+    .pub-links a { font-size: 0.82rem; font-weight: 600; }
+
+    /* Awards */
+    .awards { list-style: none; margin: 0; padding: 0; display: grid; gap: 2px; }
+    .awards li {
+      position: relative;
+      padding: 9px 0 9px 26px;
+      color: var(--ink-soft);
+      border-bottom: 1px dashed var(--border);
+    }
+    .awards li:last-child { border-bottom: none; }
+    .awards li::before {
+      content: "★";
+      position: absolute;
+      left: 0;
+      top: 9px;
+      color: var(--accent-soft);
+      font-size: 0.85rem;
+    }
+
+    /* Footer */
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 32px 0 48px;
+      color: var(--muted);
+      font-size: 0.85rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px 18px;
+      justify-content: space-between;
+      align-items: center;
+    }
+    footer a { color: var(--muted); }
+    footer a:hover { color: var(--accent); }
+
+    @media (max-width: 560px) {
+      .nav-links { gap: 16px; }
+      .nav-links a:nth-child(n+3) { display: none; }
+      .hero { padding: 56px 0 40px; }
+      .hero-top { flex-direction: column; align-items: flex-start; gap: 20px; }
+      .hero h1 { font-size: 2.1rem; }
+      .lede { font-size: 1.12rem; }
+      .edu-item { flex-direction: column; gap: 2px; }
+    }
+  </style>
 </head>
+<body>
+  <header class="nav">
+    <div class="nav-inner">
+      <span class="brand">Siyu Liu</span>
+      <nav class="nav-links">
+        <a href="#about">About</a>
+        <a href="#research">Research</a>
+        <a href="#publications">Publications</a>
+        <a href="#awards">Awards</a>
+      </nav>
+    </div>
+  </header>
 
-<body id="page-top">
-    <!-- Navigation-->
-    <nav class="header navbar navbar-expand-lg navbar-light fixed-top shadow-sm" id="mainNav">
-        <div class="container px-5">
-            <a id="page-top-title" class="navbar-brand fw-bold" href="#page-top"></a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive"
-                aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-                MENU
-                <i class="bi-list"></i>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarResponsive">
-                <ul class="navbar-nav ms-auto me-4 my-3 my-lg-0">
-                    <li class="nav-item">
-                        <a class="nav-link me-lg-3" href="#page-top">HOME</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link me-lg-3" href="#publications">PUBLICATIONS</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link me-lg-3" href="#awards">AWARDS</a>
-                    </li>
-
-                </ul>
-            </div>
-        </div>
-    </nav>
-
+  <main class="wrap">
     <!-- Hero -->
-    <section class="hero" style="background-image: url('static/assets/img/background.jpeg');" id="intro">
-        <div class="container px-5">
-            <div class="row align-items-center g-5">
-                <div class="col-lg-7">
-                    <p class="hero-eyebrow text-uppercase" id="hero-eyebrow"></p>
-                    <h1 class="text-white display-4 fw-bold" id="hero-heading"></h1>
-                    <p class="hero-subheading text-white-50 lead" id="hero-subheading"></p>
-                    <div class="hero-meta">
-                        <span class="tag" id="hero-highlight"></span>
-                        <span class="tag tag-muted" id="hero-secondary"></span>
-                    </div>
-                    <div class="hero-actions">
-                        <a class="btn btn-light btn-lg" href="#publications">Explore Work</a>
-                        <a class="btn btn-outline-light btn-lg" id="hero-cta" href="#">
-                            <span id="hero-cta-text"></span>
-                        </a>
-                    </div>
-                </div>
-                <div class="col-lg-5">
-                    <div class="profile-card shadow-lg">
-                        <div class="profile-photo-wrapper">
-                            <img class="profile-photo" src="static/assets/img/photo.jpeg" alt="Portrait of Siyu Liu" onerror="this.style.display='none';">
-                        </div>
-                        <div class="profile-card-body">
-                            <p class="profile-note" id="hero-profile-note"></p>
-                            <p class="profile-extra text-muted" id="hero-profile-extra"></p>
-                        </div>
-                    </div>
-                </div>
-            </div>
+    <section class="hero" id="about" style="border-top:none;">
+      <div class="hero-top">
+        <img class="avatar" src="static/assets/img/photo.jpeg" alt="Siyu Liu" />
+        <div>
+          <p class="eyebrow">Computational Materials Researcher</p>
+          <h1>Siyu&nbsp;Liu</h1>
         </div>
+      </div>
+      <p class="lede">
+        I am a Ph.D. candidate in the <em>Materials Theory Group</em> at HKU, building
+        autonomous workflows that connect atomistic simulations, scientific foundation
+        models, and large language models for accelerated discovery. My recent
+        collaborations span multi-agent reasoning for materials laws, elastic tensor
+        prediction, and generative design for inverse problems.
+      </p>
+      <div class="links">
+        <a class="pill" href="mailto:siyuliu@connect.hku.hk">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+          siyuliu@connect.hku.hk
+        </a>
+        <a class="pill" href="https://github.com/Grenzlinie" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5A11.5 11.5 0 0 0 .5 12a11.5 11.5 0 0 0 7.86 10.92c.58.1.79-.25.79-.56v-2c-3.2.7-3.88-1.37-3.88-1.37-.53-1.34-1.3-1.7-1.3-1.7-1.06-.72.08-.7.08-.7 1.17.08 1.79 1.2 1.79 1.2 1.04 1.79 2.73 1.27 3.4.97.1-.76.41-1.28.74-1.57-2.56-.29-5.26-1.28-5.26-5.7 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11 11 0 0 1 5.8 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.84 1.19 3.1 0 4.43-2.7 5.4-5.28 5.69.42.36.8 1.08.8 2.18v3.24c0 .31.21.67.8.56A11.5 11.5 0 0 0 23.5 12 11.5 11.5 0 0 0 12 .5Z"/></svg>
+          GitHub
+        </a>
+        <a class="pill" href="https://scholar.google.com/citations?hl=zh-CN&user=cCE-lrEAAAAJ&view_op=list_works&sortby=pubdate" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 3 1 9l11 6 9-4.91V17h2V9L12 3Zm0 13.5L5 12.7v3.3c0 1.66 3.13 3 7 3s7-1.34 7-3v-3.3l-7 3.8Z"/></svg>
+          Google Scholar
+        </a>
+      </div>
     </section>
-    <!-- Hero -->
-    
-    <!-- Home -->
-    <section class="section bg-surface" id="home">
-        <div class="container px-5">
-            <div class="section-heading">
-                <p class="eyebrow">About</p>
-                <h2 id="home-subtitle"></h2>
-                <p class="section-blurb" id="home-lede"></p>
-            </div>
-            <div class="row g-5 align-items-start">
-                <div class="col-lg-7">
-                    <div class="content-panel" id="home-md"></div>
-                </div>
-                <div class="col-lg-5">
-                    <div class="info-panel">
-                        <h3><i class="bi bi-envelope-paper"></i> Contact</h3>
-                        <ul class="contact-list">
-                            <li>
-                                <span>Email</span>
-                                <a id="contact-email" href="#" target="_blank" rel="noopener"></a>
-                            </li>
-                            <li>
-                                <span>Location</span>
-                                <p class="mb-0" id="contact-location"></p>
-                            </li>
-                            <li>
-                                <span>GitHub</span>
-                                <a id="contact-cv" href="#" target="_blank" rel="noopener"></a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="info-panel">
-                        <h3><i class="bi bi-stars"></i> Research Focus</h3>
-                        <div class="badge-cluster" id="research-focus"></div>
-                    </div>
-                </div>
-            </div>
+
+    <!-- Education -->
+    <section id="education">
+      <h2 class="section-title">Education</h2>
+      <div class="edu-item">
+        <div>
+          <div class="edu-degree">Ph.D. Candidate, Mechanical Engineering</div>
+          <div class="edu-detail">The University of Hong Kong (HKU)</div>
         </div>
+        <div class="edu-year">2023 – 2027 (expected)</div>
+      </div>
+      <div class="edu-item">
+        <div>
+          <div class="edu-degree">M.S., Physical Electronics</div>
+          <div class="edu-detail">Fudan University</div>
+        </div>
+        <div class="edu-year">2020 – 2023</div>
+      </div>
+      <div class="edu-item">
+        <div>
+          <div class="edu-degree">B.E., Materials Science and Engineering</div>
+          <div class="edu-detail">Central South University</div>
+        </div>
+        <div class="edu-year">2016 – 2020</div>
+      </div>
     </section>
-    <!-- Home -->
+
+    <!-- Research -->
+    <section id="research">
+      <h2 class="section-title">Current Directions</h2>
+      <ul class="research-list">
+        <li>Benchmarking LLM-powered lab copilots for reproducible materials workflows.</li>
+        <li>Generative crystal design with physics-grounded constraints.</li>
+        <li>Active learning strategies linking simulation data and wet-lab validation.</li>
+      </ul>
+    </section>
 
     <!-- Publications -->
-    <section class="section section-alt" id="publications">
-        <div class="container px-5">
-            <div class="section-heading heading-row">
-                <div>
-                    <p class="eyebrow">Selected Work</p>
-                    <h2 id="publications-subtitle"><i class="bi bi-file-text-fill"></i>&nbsp;Publications</h2>
-                </div>
-                <a class="btn btn-outline-primary" id="publications-cta" href="#" target="_blank" rel="noopener"></a>
-            </div>
-            <div class="main-body publication-feed" id="publications-md"></div>
+    <section id="publications">
+      <h2 class="section-title">Publications</h2>
+
+      <div class="pub">
+        <p class="pub-title">Test-Time Self-Evolution in Multi-Agent Systems for Materials Discovery</p>
+        <p class="pub-authors"><span class="me">S. Liu</span>, B. Hu, B. Ye, H. Cao, D. J. Srolovitz*, T. Wen*</p>
+        <div class="pub-meta">
+          <span class="venue oral">AI4X-AC 2026 · Oral</span>
+          <span class="pub-year">2026</span>
+          <span class="pub-links"><a href="https://openreview.net/forum?id=qqT5zb5dnq" target="_blank" rel="noopener">Paper</a></span>
         </div>
+      </div>
+
+      <div class="pub">
+        <p class="pub-title">Mozi: Governed Autonomy for Drug Discovery LLM Agents</p>
+        <p class="pub-authors">H. Cao, <span class="me">S. Liu</span>, F. Zhang, ZJ. Liu, H. Li, B. Feng, S. Bai, L. Chen, K. Xie, Y. Li</p>
+        <div class="pub-meta">
+          <span class="venue">arXiv</span>
+          <span class="pub-year">2026</span>
+          <span class="pub-links"><a href="https://arxiv.org/abs/2603.03655" target="_blank" rel="noopener">Paper</a></span>
+        </div>
+      </div>
+
+      <div class="pub">
+        <p class="pub-title">MatTools: Benchmarking Large Language Models for Materials Science Tools</p>
+        <p class="pub-authors"><span class="me">S. Liu</span>, J. Xu, B. Ye, B. Hu, D. J. Srolovitz*, T. Wen*</p>
+        <div class="pub-meta">
+          <span class="venue">arXiv</span>
+          <span class="pub-year">2025</span>
+          <span class="pub-links"><a href="https://arxiv.org/abs/2505.10852v1" target="_blank" rel="noopener">Paper</a></span>
+        </div>
+      </div>
+
+      <div class="pub">
+        <p class="pub-title">DrugNav: A Benchmark Dataset of Expert Trajectories for Developing and Evaluating LLM Agents in Multi-Step Drug Discovery</p>
+        <p class="pub-authors">H. Cao, <span class="me">S. Liu</span>, F. Zhang, H. Li, ZJ. Liu, B. Feng, Y. Li</p>
+        <div class="pub-meta">
+          <span class="venue">NeurIPS 2025 · AI for Science Workshop</span>
+          <span class="pub-year">2025</span>
+        </div>
+      </div>
+
+      <div class="pub">
+        <p class="pub-title">Large Language Models for Material Property Predictions: elastic constant tensor prediction and materials design</p>
+        <p class="pub-authors"><span class="me">S. Liu</span>, T. Wen*, B. Ye, Z. Li, D. J. Srolovitz*</p>
+        <div class="pub-meta">
+          <span class="venue">Digital Discovery</span>
+          <span class="pub-year">2025</span>
+          <span class="pub-links">
+            <a href="https://pubs.rsc.org/en/content/articlelanding/2025/dd/d5dd00061k" target="_blank" rel="noopener">Paper</a>
+            <a href="https://github.com/Grenzlinie/ElaTBot" target="_blank" rel="noopener">Code</a>
+          </span>
+        </div>
+      </div>
+
+      <div class="pub">
+        <p class="pub-title">Active Learning for Conditional Inverse Design with Crystal Generation and Foundation Atomic Models</p>
+        <p class="pub-authors">Z. Li, <span class="me">Siyu Liu</span>, B. Ye, D. J. Srolovitz, T. Wen*</p>
+        <div class="pub-meta">
+          <span class="venue">arXiv</span>
+          <span class="pub-year">2025</span>
+          <span class="pub-links"><a href="https://arxiv.org/abs/2502.16984" target="_blank" rel="noopener">Paper</a></span>
+        </div>
+      </div>
+
+      <div class="pub">
+        <p class="pub-title">A Multi-agent Framework for Materials Laws Discovery</p>
+        <p class="pub-authors">B. Hu, <span class="me">S. Liu</span>, B. Ye, Y. Hao, T. Wen*</p>
+        <div class="pub-meta">
+          <span class="venue">arXiv</span>
+          <span class="pub-year">2024</span>
+          <span class="pub-links"><a href="https://arxiv.org/abs/2411.16416" target="_blank" rel="noopener">Paper</a></span>
+        </div>
+      </div>
+
+      <div class="pub">
+        <p class="pub-title">A Prompt-Engineered Large Language Model, Deep Learning Workflow for Materials Classification</p>
+        <p class="pub-authors"><span class="me">S. Liu</span>, T. Wen*, A. S. L. Pattamatta, D. J. Srolovitz*</p>
+        <div class="pub-meta">
+          <span class="venue">Materials Today</span>
+          <span class="pub-year">2024</span>
+          <span class="pub-links">
+            <a href="https://www.sciencedirect.com/science/article/abs/pii/S1369702124002001" target="_blank" rel="noopener">Paper</a>
+            <a href="https://github.com/Grenzlinie/MgBERT_LLM_Classification_for_Materials_Science" target="_blank" rel="noopener">Code</a>
+          </span>
+        </div>
+      </div>
+
+      <div class="pub">
+        <p class="pub-title">Enhancing the Efficiency and Stability of Inverted Formamidinium-Cesium Lead-Triiodide Perovskite Solar Cells through Lewis Base Pretreatment of Buried Interfaces</p>
+        <p class="pub-authors">J. Wang, <span class="me">S. Liu</span>, X. Guan, K. Wang, S. Shen, C. Cong, C. Chen, F. Xie</p>
+        <div class="pub-meta">
+          <span class="venue">ACS Applied Materials &amp; Interfaces</span>
+          <span class="pub-year">2024</span>
+          <span class="pub-links"><a href="https://pubs.acs.org/doi/abs/10.1021/acsami.4c04901" target="_blank" rel="noopener">Paper</a></span>
+        </div>
+      </div>
+
+      <div class="pub">
+        <p class="pub-title">Surface Cleaning and Passivation Strategy for Durable Inverted Formamidinium–Cesium Triiodide Perovskite Solar Cells</p>
+        <p class="pub-authors">J. Wang, K. Wang, C. Zhang, <span class="me">S. Liu</span>, X. Guan, C. Liang, CC. Chen, F. Xie</p>
+        <div class="pub-meta">
+          <span class="venue">Advanced Energy Materials</span>
+          <span class="pub-year">2023</span>
+          <span class="pub-links"><a href="https://onlinelibrary.wiley.com/doi/abs/10.1002/aenm.202302169" target="_blank" rel="noopener">Paper</a></span>
+        </div>
+      </div>
+
+      <div class="pub">
+        <p class="pub-title">The effects of organic cation rotation in hybrid Organic-Inorganic Perovskites: A critical review</p>
+        <p class="pub-authors"><span class="me">S. Liu</span>, R. Guo, F. Xie</p>
+        <div class="pub-meta">
+          <span class="venue">Materials &amp; Design</span>
+          <span class="pub-year">2022</span>
+          <span class="pub-links"><a href="https://www.sciencedirect.com/science/article/pii/S0264127522005731" target="_blank" rel="noopener">Paper</a></span>
+        </div>
+      </div>
+
+      <div class="pub">
+        <p class="pub-title">Quantum dots-hydrogel composites for biomedical applications</p>
+        <p class="pub-authors">W. Zhou, Z. Hu, J. Wei, H. Dai, Y. Chen, <span class="me">S. Liu</span>, Z. Duan, F. Xie, W. Zhang, R. Guo</p>
+        <div class="pub-meta">
+          <span class="venue">Chinese Chemical Letters</span>
+          <span class="pub-year">2022</span>
+          <span class="pub-links"><a href="https://www.sciencedirect.com/science/article/pii/S1001841721007397" target="_blank" rel="noopener">Paper</a></span>
+        </div>
+      </div>
+
+      <div class="pub">
+        <p class="pub-title">Quantum dots-hydrogel composites for biomedical applications</p>
+        <p class="pub-authors"><span class="me">S. Liu</span>, J. Wang, Z. Duan, K. Wang, W. Zhang, R. Guo, F. Xie</p>
+        <div class="pub-meta">
+          <span class="venue">ACS Applied Materials &amp; Interfaces</span>
+          <span class="pub-year">2022</span>
+          <span class="pub-links"><a href="https://pubs.acs.org/doi/abs/10.1021/acsami.1c24003" target="_blank" rel="noopener">Paper</a></span>
+        </div>
+      </div>
+
+      <div class="pub">
+        <p class="pub-title">Quantum dots-hydrogel composites for biomedical applications</p>
+        <p class="pub-authors">J. Wei, Z. Hu, W. Zhou, Y. Qiu, H. Dai, Y. Chen, Z. Cui, <span class="me">S. Liu</span>, H. He, W. Zhang, F. Xie, R. Guo</p>
+        <div class="pub-meta">
+          <span class="venue">Journal of Colloid and Interface Science</span>
+          <span class="pub-year">2021</span>
+          <span class="pub-links"><a href="https://www.sciencedirect.com/science/article/pii/S002197972100789X" target="_blank" rel="noopener">Paper</a></span>
+        </div>
+      </div>
+
+      <div class="pub">
+        <p class="pub-title">Role of organic cation orientation in formamidine based perovskite materials</p>
+        <p class="pub-authors"><span class="me">S. Liu</span>, J. Wang, Z. Hu, Z. Duan, H. Zhang, W. Zhang, R. Guo, F. Xie</p>
+        <div class="pub-meta">
+          <span class="venue">Scientific Reports</span>
+          <span class="pub-year">2021</span>
+          <span class="pub-links"><a href="https://www.nature.com/articles/s41598-021-99621-1" target="_blank" rel="noopener">Paper</a></span>
+        </div>
+      </div>
+
+      <div class="pub">
+        <p class="pub-title">Thioacetamide-ligand-mediated synthesis of CsPbBr3–CsPbBr3 homostructured nanocrystals with enhanced stability</p>
+        <p class="pub-authors">H. He, S. Mei, Z. Chen, <span class="me">S. Liu</span>, Z. Wen, Z. Cui, D. Yang, W. Zhang, F. Xie, B. Yang, R. Guo, G. Xing</p>
+        <div class="pub-meta">
+          <span class="venue">Journal of Materials Chemistry C</span>
+          <span class="pub-year">2021</span>
+          <span class="pub-links"><a href="https://pubs.rsc.org/en/content/articlehtml/2021/tc/d1tc02118d" target="_blank" rel="noopener">Paper</a></span>
+        </div>
+      </div>
+
+      <p style="margin-top:22px; color:var(--muted); font-size:0.92rem;">
+        The latest publication list can be found on
+        <a href="https://scholar.google.com/citations?hl=zh-CN&user=cCE-lrEAAAAJ&view_op=list_works&sortby=pubdate" target="_blank" rel="noopener">my Google Scholar</a>.
+      </p>
     </section>
-    <!-- Publications  -->
 
     <!-- Awards -->
-    <section class="section bg-surface" id="awards">
-        <div class="container px-5">
-            <div class="section-heading">
-                <p class="eyebrow">Recognition</p>
-                <h2 id="awards-subtitle"><i class="bi bi-award-fill"></i> Awards & Honors</h2>
-            </div>
-            <div class="main-body" id="awards-md"></div>
-        </div>
+    <section id="awards">
+      <h2 class="section-title">Honors &amp; Awards</h2>
+      <ul class="awards">
+        <li>National Scholarship, China</li>
+        <li>National Encouragement Scholarship, China</li>
+        <li>Excellent Graduate of Shanghai, China</li>
+        <li>Fudan University Outstanding Student, China</li>
+        <li>Fudan University Outstanding Academic Scholarship, China</li>
+        <li>Outstanding Graduate of Central South University, China</li>
+        <li>Central South University Outstanding Student, China</li>
+        <li>Central South University Outstanding Academic Scholarship, China</li>
+      </ul>
     </section>
-    <!-- Awards -->
+  </main>
 
-
-    <!-- Footer-->
-    <footer class="site-footer text-center py-5">
-        <div class="container px-5">
-            <div class="footer-brand">Siyu Liu</div>
-            <div class="social-links">
-                <a href="https://github.com/Grenzlinie" target="_blank" rel="noopener" aria-label="GitHub">
-                    <i class="bi bi-github"></i>
-                </a>
-                <a href="https://scholar.google.com/citations?hl=zh-CN&user=cCE-lrEAAAAJ&view_op=list_works&sortby=pubdate" target="_blank" rel="noopener" aria-label="Google Scholar">
-                    <i class="bi bi-google"></i>
-                </a>
-                <a href="mailto:siyuliu@connect.hku.hk" aria-label="Email">
-                    <i class="bi bi-envelope"></i>
-                </a>
-            </div>
-            <div class="small text-white-50" id="copyright-text"></div>
-        </div>
-    </footer>
-
+  <footer class="wrap">
+    <span>&copy; Siyu Liu 2024–2026 · Hong Kong SAR, China</span>
+    <span>
+      <a href="mailto:siyuliu@connect.hku.hk">Email</a> ·
+      <a href="https://github.com/Grenzlinie" target="_blank" rel="noopener">GitHub</a> ·
+      <a href="https://scholar.google.com/citations?hl=zh-CN&user=cCE-lrEAAAAJ&view_op=list_works&sortby=pubdate" target="_blank" rel="noopener">Scholar</a>
+    </span>
+  </footer>
 </body>
-
 </html>

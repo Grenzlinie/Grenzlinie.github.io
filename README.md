@@ -1,54 +1,31 @@
-## Introduction
+# Grenzlinie.github.io
 
-This is an academic personal website template based on [bootstrap](https://github.com/StartBootstrap/startbootstrap-new-age).
+Personal academic homepage of **Siyu Liu** — Ph.D. candidate in the Materials Theory
+Group at HKU.
 
-The template is designed to integrate Markdown files as content input.  There's no need to compile the webpage before deployment.  Upon loading, the Markdown files are automatically parsed and embedded into the page.
+Live at **https://grenzlinie.github.io**.
 
-This template supports LaTeX formula input. You can use `$...$` and `\(...\)` as delimiters for inline-math, or use `$$...$$` and `\[...\]` as delimiters for display-math. Macros such as `\ref{...}`, `\eqref{...}`, and `\begin{equation}...\end{equation}` are also supported. See [MathJax](https://docs.mathjax.org/en/latest/index.html) for more details.
+## About
 
+A single, self-contained static page (`index.html`) with a clean, minimalist design.
+All content is written directly into the HTML — no build step, no JavaScript framework,
+and no markdown parsing at load time. Just open `index.html` in a browser to preview.
 
-## Getting Start
-### 1. Fork this repository
-The repository name should be `<username>.github.io`, which will also be your website's URL.
-
-
-### 2. Edit page content
-
-(1) Go to the folder where you want to store your project, and clone the new repository:
 ```
-git clone https://github.com/<username>/<username>.github.io.git
-```
-The directory structure is as follows:
-
-```.
 .
-├── contents
-└── static
-    ├── assets
-    │   └── img
-    ├── css
-    └── js
+├── index.html            # the whole site (content + styles)
+└── static/
+    └── assets/
+        ├── favicon.ico
+        └── img/
+            └── photo.jpeg
 ```
 
-(2) Modify the content of each section, which corresponds to `contents/*.md`.
+## Editing
 
-(3) Adjust the title, copyright information, and other text of the website in `contents/config.yml`
-
-(4) Replace background image and photo with new ones for your web pages in `static/assets/img/`
-
-(5) Push it: 
-```
-git commit -am 'init'
-git push
-```
-
-
-### 3. Enjoy
-
-Fire up a browser and go to `https://<username>.github.io`
-
-
+Edit `index.html` directly to update the intro, education, research directions,
+publications, or awards, then commit and push — GitHub Pages serves `main` automatically.
 
 ## License
 
-Copyright Siyu Liu, 2024. Licensed under an MIT license. You can copy and mess with this template.
+Licensed under an MIT license. See `LICENSE`.
