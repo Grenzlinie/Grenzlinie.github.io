@@ -53,19 +53,22 @@
       border-bottom: 1px solid var(--border);
     }
     .nav-inner {
-      max-width: 760px;
+      max-width: 880px;
       margin: 0 auto;
-      padding: 15px 28px;
+      padding: 16px 28px;
       display: flex;
       align-items: center;
       justify-content: space-between;
+      flex-wrap: nowrap;
+      gap: 40px;
     }
     .brand {
       display: inline-flex;
       align-items: center;
       gap: 11px;
+      flex-shrink: 0;
       font-family: var(--serif);
-      font-size: 1.15rem;
+      font-size: 1.1rem;
       font-weight: 600;
       letter-spacing: -0.01em;
       color: var(--ink);
@@ -92,7 +95,7 @@
     }
     .brand-name { transition: color 0.15s ease; white-space: nowrap; }
     .brand:hover .brand-name { color: var(--accent); }
-    .nav-links { display: flex; gap: 26px; }
+    .nav-links { display: flex; gap: 24px; flex-shrink: 0; }
     .nav-links a {
       color: var(--ink-soft);
       font-size: 0.9rem;
@@ -820,10 +823,9 @@
     (function () {
       var at = String.fromCharCode(64);
       document.querySelectorAll('a.js-email').forEach(function (el) {
-        var addr = el.dataset.user + at + el.dataset.domain;
-        el.href = 'mailto:' + addr;
-        var label = el.querySelector('.email-text');
-        if (label) { label.textContent = addr; }
+        // Set the working mailto href only; leave the visible "[at]" text as-is
+        // so the plain address never renders (or sits) in the DOM for scrapers.
+        el.href = 'mailto:' + el.dataset.user + at + el.dataset.domain;
       });
     })();
 
