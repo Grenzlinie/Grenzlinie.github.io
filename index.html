@@ -187,6 +187,63 @@
       background: var(--accent-soft);
     }
 
+    /* Experience */
+    .exp-item { padding: 18px 0; }
+    .exp-item + .exp-item { border-top: 1px solid var(--border); }
+    .exp-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 16px;
+      margin-bottom: 8px;
+    }
+    .exp-role { font-weight: 600; color: var(--ink); }
+    .exp-org { color: var(--accent); font-weight: 500; }
+    .exp-org::before { content: "·"; margin: 0 8px; color: var(--muted); font-weight: 400; }
+    .exp-year {
+      color: var(--muted);
+      font-size: 0.85rem;
+      white-space: nowrap;
+      font-variant-numeric: tabular-nums;
+    }
+    .exp-points { margin: 0; padding-left: 20px; color: var(--ink-soft); font-size: 0.95rem; }
+    .exp-points li { padding: 3px 0; }
+
+    /* Selected Research (highlight cards) */
+    .hl { display: flex; gap: 24px; padding: 24px 0; align-items: flex-start; }
+    .hl + .hl { border-top: 1px solid var(--border); }
+    .hl-fig {
+      flex: 0 0 210px;
+      display: block;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      overflow: hidden;
+      background: #fff;
+      transition: border-color 0.15s ease, box-shadow 0.15s ease;
+    }
+    .hl-fig:hover { border-color: var(--accent-soft); box-shadow: 0 6px 20px rgba(26,25,21,0.08); }
+    .hl-fig img { width: 100%; display: block; }
+    .hl-body { flex: 1; min-width: 0; }
+    .hl-tag {
+      display: inline-block;
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 6px;
+    }
+    .hl-title {
+      font-family: var(--serif);
+      font-size: 1.14rem;
+      font-weight: 600;
+      line-height: 1.35;
+      color: var(--ink);
+      margin: 0 0 8px;
+    }
+    .hl-summary { margin: 0 0 10px; color: var(--ink-soft); font-size: 0.95rem; }
+    .hl-links a { font-size: 0.82rem; font-weight: 600; margin-right: 14px; }
+
     /* Publications */
     .pub { padding: 18px 0; }
     .pub + .pub { border-top: 1px solid var(--border); }
@@ -250,13 +307,18 @@
     footer a:hover { color: var(--accent); }
 
     @media (max-width: 560px) {
-      .nav-links { gap: 16px; }
-      .nav-links a:nth-child(n+3) { display: none; }
+      .nav-links { gap: 15px; }
+      .nav-links a:nth-child(n+4) { display: none; }
       .hero { padding: 56px 0 40px; }
       .hero-top { flex-direction: column; align-items: flex-start; gap: 20px; }
       .hero h1 { font-size: 2.1rem; }
       .lede { font-size: 1.12rem; }
       .edu-item { flex-direction: column; gap: 2px; }
+      .exp-head { flex-direction: column; gap: 2px; }
+      .exp-org::before { display: none; }
+      .exp-org { margin-left: 0; }
+      .hl { flex-direction: column; gap: 16px; }
+      .hl-fig { flex-basis: auto; width: 100%; }
     }
   </style>
 </head>
@@ -266,6 +328,7 @@
       <span class="brand">Siyu Liu</span>
       <nav class="nav-links">
         <a href="#about">About</a>
+        <a href="#experience">Experience</a>
         <a href="#research">Research</a>
         <a href="#publications">Publications</a>
         <a href="#awards">Awards</a>
@@ -332,8 +395,143 @@
       </div>
     </section>
 
-    <!-- Research -->
+    <!-- Experience -->
+    <section id="experience">
+      <h2 class="section-title">Experience</h2>
+
+      <div class="exp-item">
+        <div class="exp-head">
+          <div><span class="exp-role">Algorithm Intern</span><span class="exp-org">DP Technology (深势科技)</span></div>
+          <span class="exp-year">Feb 2026 – Present</span>
+        </div>
+        <ul class="exp-points">
+          <li>Designing dry–wet closed-loop solutions for the Suzhou National Laboratory.</li>
+          <li>Building <code>bohrium-skills-cli</code> to unify management of skills across the DP ecosystem.</li>
+          <li>Developing MatMaster, a materials-domain agent.</li>
+          <li>Leading Paper2Arm: high-throughput literature reproduction and agent evaluation.</li>
+        </ul>
+      </div>
+
+      <div class="exp-item">
+        <div class="exp-head">
+          <div><span class="exp-role">LLM Algorithm Intern</span><span class="exp-org">IDEA · International Digital Economy Academy</span></div>
+          <span class="exp-year">Aug 2025 – Jan 2026</span>
+        </div>
+        <ul class="exp-points">
+          <li>Built <strong>Mozi</strong>, an agent for the full drug-discovery pipeline — target discovery, hit discovery, hit-to-lead, and property optimization.</li>
+          <li>Focused on safety guardrails and controlled workflows so the agent system completes complex drug-discovery tasks within safe boundaries and with humans kept in the loop.</li>
+        </ul>
+      </div>
+
+      <div class="exp-item">
+        <div class="exp-head">
+          <div><span class="exp-role">AI for Science Intern</span><span class="exp-org">Shanghai AI Laboratory</span></div>
+          <span class="exp-year">Nov 2022 – Jan 2023</span>
+        </div>
+        <ul class="exp-points">
+          <li>Equivariant graph neural networks for fluid-field simulation.</li>
+          <li>Symbolic-learning discovery of energy descriptors for lithium batteries.</li>
+        </ul>
+      </div>
+
+      <div class="exp-item">
+        <div class="exp-head">
+          <div><span class="exp-role">Frontend Development Intern</span><span class="exp-org">Ant Group · Digital Finance, Experience Technology</span></div>
+          <span class="exp-year">Jun 2022 – Sep 2022</span>
+        </div>
+        <ul class="exp-points">
+          <li>Improved several Alipay H5 products; implemented personalized ("thousand-faces") dynamic delivery of a frontend component via microservices, and an Alipay repayment-flow upgrade using DRM traffic switching.</li>
+          <li>Helped build the team's mock-data management center and maintain the department's low-code operations web platform — gaining end-to-end familiarity with the software lifecycle from requirements to release.</li>
+        </ul>
+      </div>
+
+      <div class="exp-item">
+        <div class="exp-head">
+          <div><span class="exp-role">Frontend Development Intern</span><span class="exp-org">4Paradigm · Tech Platform</span></div>
+          <span class="exp-year">May 2022 – Jun 2022</span>
+        </div>
+        <ul class="exp-points">
+          <li>Maintained and extended the department's algorithm-platform frontend management system: a data-source management page with Ant Design, and an algorithm-flow diagram (AntV) rendered from backend query data, with configurable steps managed through a top-level instance for data sharing and I/O validation.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Selected Research -->
     <section id="research">
+      <h2 class="section-title">Selected Research</h2>
+
+      <article class="hl">
+        <div class="hl-body">
+          <span class="hl-tag">LLM · AI4X 2026 (ongoing)</span>
+          <h3 class="hl-title">Test-Time Self-Evolution in Multi-Agent Systems for Materials Discovery</h3>
+          <p class="hl-summary">A file-system-based agent memory that distills failures into reusable <em>Memory</em> and successes into reusable <em>Skills</em>, letting LLM agents accumulate cross-task experience. Ablations on Sol27LC and MatTools confirm that removing the memory, the sandbox feedback, or cross-conversation reuse each lowers task success.</p>
+          <div class="hl-links"><a href="https://openreview.net/forum?id=qqT5zb5dnq" target="_blank" rel="noopener">Paper →</a></div>
+        </div>
+      </article>
+
+      <article class="hl">
+        <a class="hl-fig" href="https://arxiv.org/abs/2603.03655" target="_blank" rel="noopener">
+          <img src="static/assets/img/papers/mozi.png" alt="Mozi architecture figure" loading="lazy" />
+        </a>
+        <div class="hl-body">
+          <span class="hl-tag">LLM · arXiv 2026</span>
+          <h3 class="hl-title">Mozi: Governed Autonomy for Drug Discovery LLM Agents</h3>
+          <p class="hl-summary">A two-plane agent architecture — a Supervisor–Worker control plane (tool constraints, role isolation, reflective replanning) over a workflow plane that models drug discovery as composable Skill Graphs with tool governance, data contracts, and human-in-the-loop. Reaches 21.4% on the HLE drug-discovery subset and beats Biomni, SciMaster, and STELLA (e.g. +65% classification accuracy over Biomni on PharmaBench, +50% MCQ, −27% regression SMAPE).</p>
+          <div class="hl-links"><a href="https://arxiv.org/abs/2603.03655" target="_blank" rel="noopener">Paper →</a></div>
+        </div>
+      </article>
+
+      <article class="hl">
+        <a class="hl-fig" href="https://arxiv.org/abs/2505.10852v1" target="_blank" rel="noopener">
+          <img src="static/assets/img/papers/mattools.png" alt="MatTools benchmark overview figure" loading="lazy" />
+        </a>
+        <div class="hl-body">
+          <span class="hl-tag">LLM · arXiv 2025 (under review, npj Comput. Mater.)</span>
+          <h3 class="hl-title">MatTools: Benchmarking Large Language Models for Materials Science Tools</h3>
+          <p class="hl-summary">Two benchmarks — materials Q&amp;A and simulation-code generation — reveal that LLMs answer descriptive questions well but generate correct materials-computation code only ~20% of the time. Our agent system lifts that to nearly 60%.</p>
+          <div class="hl-links"><a href="https://arxiv.org/abs/2505.10852v1" target="_blank" rel="noopener">Paper →</a></div>
+        </div>
+      </article>
+
+      <article class="hl">
+        <a class="hl-fig" href="https://arxiv.org/abs/2411.16416" target="_blank" rel="noopener">
+          <img src="static/assets/img/papers/materials-laws.png" alt="Materials Laws Discovery framework figure" loading="lazy" />
+        </a>
+        <div class="hl-body">
+          <span class="hl-tag">LLM · arXiv 2024</span>
+          <h3 class="hl-title">A Multi-agent Framework for Materials Laws Discovery</h3>
+          <p class="hl-summary">A multi-agent system with depth-first search over formula-derivation paths derives an interpretable law for metallic-glass forming ability (GFA), reaching R² = 0.948 at lower formula complexity than traditional approaches.</p>
+          <div class="hl-links"><a href="https://arxiv.org/abs/2411.16416" target="_blank" rel="noopener">Paper →</a></div>
+        </div>
+      </article>
+
+      <article class="hl">
+        <div class="hl-body">
+          <span class="hl-tag">LLM · Digital Discovery (JCR Q1)</span>
+          <h3 class="hl-title">LLMs for Material Property Predictions: elastic constant tensor prediction and materials design</h3>
+          <p class="hl-summary">An end-to-end, multi-task-augmented fine-tuned LLM predicts elastic constant tensors with 33.1% lower MAE than prior materials LLMs on the same training set — while also enabling inverse (property-to-material) design and retrieval-augmented (RAG) prediction.</p>
+          <div class="hl-links">
+            <a href="https://pubs.rsc.org/en/content/articlelanding/2025/dd/d5dd00061k" target="_blank" rel="noopener">Paper →</a>
+            <a href="https://github.com/Grenzlinie/ElaTBot" target="_blank" rel="noopener">Code →</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="hl">
+        <div class="hl-body">
+          <span class="hl-tag">LLM · Materials Today (JCR Q1)</span>
+          <h3 class="hl-title">A Prompt-Engineered LLM + Deep Learning Workflow for Materials Classification</h3>
+          <p class="hl-summary">MgBERT — MatSciBERT adapted for longer token lengths and fine-tuned on Gemini-generated compositional descriptions — raises metallic-glass binary-classification accuracy from 78.2% (GBDT) to 95.2%.</p>
+          <div class="hl-links">
+            <a href="https://www.sciencedirect.com/science/article/abs/pii/S1369702124002001" target="_blank" rel="noopener">Paper →</a>
+            <a href="https://github.com/Grenzlinie/MgBERT_LLM_Classification_for_Materials_Science" target="_blank" rel="noopener">Code →</a>
+          </div>
+        </div>
+      </article>
+    </section>
+
+    <!-- Current Directions -->
+    <section id="directions">
       <h2 class="section-title">Current Directions</h2>
       <ul class="research-list">
         <li>Benchmarking LLM-powered lab copilots for reproducible materials workflows.</li>
