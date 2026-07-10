@@ -291,9 +291,9 @@
         prediction, and generative design for inverse problems.
       </p>
       <div class="links">
-        <a class="pill" href="mailto:siyuliu@connect.hku.hk">
+        <a class="pill js-email" href="#" data-user="siyuliu" data-domain="connect.hku.hk">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
-          siyuliu@connect.hku.hk
+          <span class="email-text">siyuliu <span aria-hidden="true">[at]</span> connect.hku.hk</span>
         </a>
         <a class="pill" href="https://github.com/Grenzlinie" target="_blank" rel="noopener">
           <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5A11.5 11.5 0 0 0 .5 12a11.5 11.5 0 0 0 7.86 10.92c.58.1.79-.25.79-.56v-2c-3.2.7-3.88-1.37-3.88-1.37-.53-1.34-1.3-1.7-1.3-1.7-1.06-.72.08-.7.08-.7 1.17.08 1.79 1.2 1.79 1.2 1.04 1.79 2.73 1.27 3.4.97.1-.76.41-1.28.74-1.57-2.56-.29-5.26-1.28-5.26-5.7 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11 11 0 0 1 5.8 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.84 1.19 3.1 0 4.43-2.7 5.4-5.28 5.69.42.36.8 1.08.8 2.18v3.24c0 .31.21.67.8.56A11.5 11.5 0 0 0 23.5 12 11.5 11.5 0 0 0 12 .5Z"/></svg>
@@ -536,10 +536,25 @@
   <footer class="wrap">
     <span>&copy; Siyu Liu 2024–2026 · Hong Kong SAR, China</span>
     <span>
-      <a href="mailto:siyuliu@connect.hku.hk">Email</a> ·
+      <a class="js-email" href="#" data-user="siyuliu" data-domain="connect.hku.hk">Email</a> ·
       <a href="https://github.com/Grenzlinie" target="_blank" rel="noopener">GitHub</a> ·
       <a href="https://scholar.google.com/citations?hl=zh-CN&user=cCE-lrEAAAAJ&view_op=list_works&sortby=pubdate" target="_blank" rel="noopener">Scholar</a>
     </span>
   </footer>
+
+  <script>
+    // Assemble mailto links at runtime so the full address never appears in
+    // the static HTML — keeps the link clickable for humans while foiling
+    // basic email-harvesting crawlers.
+    (function () {
+      var at = String.fromCharCode(64);
+      document.querySelectorAll('a.js-email').forEach(function (el) {
+        var addr = el.dataset.user + at + el.dataset.domain;
+        el.href = 'mailto:' + addr;
+        var label = el.querySelector('.email-text');
+        if (label) { label.textContent = addr; }
+      });
+    })();
+  </script>
 </body>
 </html>
