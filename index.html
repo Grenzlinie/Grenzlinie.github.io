@@ -362,8 +362,9 @@
     footer a:hover { color: var(--accent); }
 
     @media (max-width: 560px) {
-      .nav-links { gap: 15px; }
-      .nav-links a:nth-child(n+4) { display: none; }
+      .nav-inner { gap: 12px; }
+      .nav-links { gap: 12px; }
+      .nav-links a:nth-child(n+2) { display: none; }
       .brand { font-size: 0.98rem; gap: 8px; }
       .brand-mark { width: 30px; height: 30px; font-size: 0.82rem; }
       .hero { padding: 56px 0 40px; }
@@ -524,6 +525,18 @@
       <h2 class="section-title">Selected Research</h2>
 
       <article class="hl">
+        <a class="hl-fig" href="https://www.researchgate.net/publication/410043875_Harnessing_agent_memory_to_build_lifelong_AI_partners_for_materials_scientists" target="_blank" rel="noopener">
+          <img src="static/assets/img/papers/memory-centric.png" alt="Memory-centric self-evolving agent for lifelong materials research" loading="lazy" />
+        </a>
+        <div class="hl-body">
+          <span class="hl-tag">AI for Science · Preprint 2026</span>
+          <h3 class="hl-title">Harnessing Agent Memory to Build Lifelong AI Partners for Materials Scientists</h3>
+          <p class="hl-summary">A self-evolving memory framework for materials-science agents that stores scientific experience as inspectable facts and executable skills. Without model-parameter updates, memory raises GPT-5.2 task success on 49 materials-tool-use questions from 44.2% to 75.4%, while reducing repeated errors, tool calls, and trace burden across simulation workflows.</p>
+          <div class="hl-links"><a href="https://www.researchgate.net/publication/410043875_Harnessing_agent_memory_to_build_lifelong_AI_partners_for_materials_scientists" target="_blank" rel="noopener">Preprint →</a></div>
+        </div>
+      </article>
+
+      <article class="hl">
         <a class="hl-fig" href="https://openreview.net/forum?id=qqT5zb5dnq" target="_blank" rel="noopener">
           <img src="static/assets/img/papers/test-time.png" alt="Test-Time Self-Evolution overview figure" loading="lazy" />
         </a>
@@ -605,6 +618,16 @@
     <!-- Publications -->
     <section id="publications">
       <h2 class="section-title">Publications</h2>
+
+      <div class="pub">
+        <p class="pub-title">Harnessing agent memory to build lifelong AI partners for materials scientists</p>
+        <p class="pub-authors"><span class="me">S. Liu</span>, B. Hu, B. Ye, H. Cao, D. J. Srolovitz*, T. Wen*</p>
+        <div class="pub-meta">
+          <span class="venue">Preprint</span>
+          <span class="pub-year">2026</span>
+          <span class="pub-links"><a href="https://www.researchgate.net/publication/410043875_Harnessing_agent_memory_to_build_lifelong_AI_partners_for_materials_scientists" target="_blank" rel="noopener">ResearchGate</a></span>
+        </div>
+      </div>
 
       <div class="pub">
         <p class="pub-title">Test-Time Self-Evolution in Multi-Agent Systems for Materials Discovery</p>
